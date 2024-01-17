@@ -8,13 +8,14 @@
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    android:background="#2C3E50"> <!-- Dark background color -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#FFFFFF"> <!-- White background for the card -->
+        android:background="#34495E"> <!-- Slightly lighter background color -->
 
         <!-- Left Side (Date, Type, Note) -->
         <LinearLayout
@@ -29,9 +30,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:textSize="18sp"
                 android:text="01/01/2024"
-                android:textColor="#2E8B57"/> <!-- Dark Olive Green -->
+                android:textSize="18sp"
+                android:textColor="#ECF0F1"/> <!-- Lighter text color -->
 
             <!-- Type -->
             <TextView
@@ -40,9 +41,9 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textSize="18sp"
                 android:text="Credit"
-                android:textColor="#4169E1"/> <!-- Royal Blue -->
+                android:textSize="18sp"
+                android:textColor="#3498DB"/> <!-- Sky Blue text color -->
 
             <!-- Note -->
             <TextView
@@ -50,9 +51,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:textSize="18sp"
                 android:text="Account"
-                android:textColor="#2E8B57"/> <!-- Dark Olive Green -->
+                android:textSize="18sp"
+                android:textColor="#ECF0F1"/> <!-- Lighter text color -->
         </LinearLayout>
 
         <!-- Right Side (Amount, Balance) -->
@@ -68,9 +69,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:textSize="18sp"
                 android:text="$100.00"
-                android:textColor="#2E8B57"/> <!-- Dark Olive Green -->
+                android:textSize="18sp"
+                android:textColor="#ECF0F1"/> <!-- Lighter text color -->
 
             <!-- Balance -->
             <TextView
@@ -79,9 +80,9 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textSize="18sp"
                 android:text="Balance: $1,000.00"
-                android:textColor="#4169E1"/> <!-- Royal Blue -->
+                android:textSize="18sp"
+                android:textColor="#3498DB"/> <!-- Sky Blue text color -->
         </LinearLayout>
 
     </LinearLayout>

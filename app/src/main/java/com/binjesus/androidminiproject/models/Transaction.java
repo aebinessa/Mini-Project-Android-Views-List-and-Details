@@ -1,5 +1,5 @@
 package com.binjesus.androidminiproject.models;
- enum transactionType{
+ public enum transactionType{
     WITHDRAWAL("Withdrawal"), DEPOSIT ("Diposit"),;
     private final String value;
 

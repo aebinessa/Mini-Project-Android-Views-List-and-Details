@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.binjesus.androidminiproject.R;
 import com.binjesus.androidminiproject.adapter.TransactionAdapter;
 import com.binjesus.androidminiproject.models.Transaction;
-import com.binjesus.androidminiproject.models.TransactionRepo;
+import com.binjesus.androidminiproject.repositories.TransactionRepo;
 
 import java.util.ArrayList;
 
