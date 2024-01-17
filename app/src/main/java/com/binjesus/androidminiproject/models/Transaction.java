@@ -1,36 +1,20 @@
 package com.binjesus.androidminiproject.models;
- public enum transactionType{
-    WITHDRAWAL("Withdrawal"), DEPOSIT ("Diposit"),;
-    private final String value;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-
-    transactionType(String value){
-        this.value=value;
-    }
-    public String getValue() {
-        return value;
-    }
-
-
-
-
-}
 public class Transaction {
 
     private int id, account;
     private String date;
     private double amount, balance;
 
+    private TransactionType type;
 
-
-
-    private transactionType type;
-
-    public Transaction(int id, int account, String date, double amount, double balance,transactionType type) {
+    public Transaction(int id, int account, String date, double amount, double balance, TransactionType type) {
         this.id = id;
         this.account = account;
-        this.date = date;
+        this.date = getCurrentDate();
         this.amount = amount;
         this.balance = balance;
         this.type = type;
@@ -77,12 +61,17 @@ public class Transaction {
         this.balance = balance;
     }
 
-    public transactionType getType() {
+    public TransactionType getType() {
         return type;
     }
 
-    public void setType(transactionType type) {
+    public void setType(TransactionType type) {
         this.type = type;
+    }
+
+    public String getCurrentDate(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+       return dateFormat.format(new Date());
     }
 }
 

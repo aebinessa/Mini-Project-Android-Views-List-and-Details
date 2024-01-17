@@ -27,12 +27,12 @@
             <!-- Date -->
             <TextView
                 android:id="@+id/textViewDate"
-                android:layout_width="match_parent"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="01/01/2024"
-                android:textSize="18sp"
-                android:textColor="#ECF0F1"/> <!-- Lighter text color -->
+                android:textColor="#ECF0F1"
+                android:textSize="18sp" /> <!-- Lighter text color -->
 
             <!-- Type -->
             <TextView
@@ -64,25 +64,28 @@
             android:orientation="vertical">
 
             <!-- Amount -->
+            <!-- Lighter text color -->
+
+            <!-- Balance -->
+
             <TextView
                 android:id="@+id/textViewAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="$100.00"
-                android:textSize="18sp"
-                android:textColor="#ECF0F1"/> <!-- Lighter text color -->
+                android:textColor="#ECF0F1"
+                android:textSize="18sp" />
 
-            <!-- Balance -->
             <TextView
                 android:id="@+id/textViewBalance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="Balance: $1,000.00"
-                android:textSize="18sp"
-                android:textColor="#3498DB"/> <!-- Sky Blue text color -->
+                android:textColor="#3498DB"
+                android:textSize="18sp" /> <!-- Sky Blue text color -->
         </LinearLayout>
 
     </LinearLayout>

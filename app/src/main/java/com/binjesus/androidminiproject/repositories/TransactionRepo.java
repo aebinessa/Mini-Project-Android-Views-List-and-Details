@@ -1,8 +1,8 @@
 package com.binjesus.androidminiproject.repositories;
 
-import com.binjesus.androidminiproject.models.Transaction;
-import com.binjesus.androidminiproject.models.transactionType;
 
+import com.binjesus.androidminiproject.models.Transaction;
+import com.binjesus.androidminiproject.models.TransactionType;
 
 import java.util.ArrayList;
 
@@ -15,19 +15,24 @@ public class TransactionRepo {
         return instance;
 }
     public ArrayList<Transaction> generateDummyTransactionList(){
+
         ArrayList<Transaction> transactions = new ArrayList<>();
-        transactions.add(new Transaction(1,1,"2024",2,2, transactionType.DEPOSIT));
-        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.WITHDRAWAL));
-        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
-        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
-        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
-        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
-//
+        transactions.add(new Transaction(1,1,"date",2,2, TransactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"date",2,2, TransactionType.WITHDRAWAL));
+        transactions.add(new Transaction(1,1,"date",2,2, TransactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"date",2,2, TransactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"date",2,2, TransactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"date",2,2, TransactionType.DEPOSIT));
+
+
 
 
 
 
 
         return transactions;
-}}
+}
+
+
+}
 

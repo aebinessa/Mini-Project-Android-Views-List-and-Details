@@ -40,9 +40,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         holder.textViewAmount.setText(String.valueOf(transactions.get(position).getAmount()));
         holder.textViewBalance.setText(String.valueOf(transactions.get(position).getBalance()));
         holder.textViewAmount.setText(String.valueOf(transactions.get(position).getAccount()));
-        // need help with the last one
+
         holder.textViewtype.setText(String.valueOf(transactions.get(position).getType()));
-// getValue in the enum .getType().getValue()
+
 
 
     }
