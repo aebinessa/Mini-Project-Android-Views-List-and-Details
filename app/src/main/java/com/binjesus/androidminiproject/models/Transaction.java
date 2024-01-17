@@ -1,10 +1,23 @@
-package com.binjesus.androidminiproject;
+package com.binjesus.androidminiproject.models;
+enum transactionType{
+    WITHDRAWAL,
+    DEPOSIT,
+    TRANSFER;
 
+}
 public class Transaction {
 
     private int id, account;
     private String date;
     private double amount, balance;
+
+    public Transaction(int id, int account, String date, double amount, double balance) {
+        this.id = id;
+        this.account = account;
+        this.date = date;
+        this.amount = amount;
+        this.balance = balance;
+    }
 
     public int getId() {
         return id;
@@ -47,21 +60,5 @@ public class Transaction {
     }
 
 
-
-    public Transaction(int id, int account, String date, double amount, double balance) {
-        this.id = id;
-        this.account = account;
-        this.date = date;
-        this.amount = amount;
-        this.balance = balance;
-    }
-
-
-
 }
-enum transactionType{
-    WITHDRAWAL,
-    DEPOSIT,
-    TRANSFER;
 
-}

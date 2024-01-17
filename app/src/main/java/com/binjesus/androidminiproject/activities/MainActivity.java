@@ -1,8 +1,10 @@
-package com.binjesus.androidminiproject;
+package com.binjesus.androidminiproject.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.binjesus.androidminiproject.R;
 
 public class MainActivity extends AppCompatActivity {
 
