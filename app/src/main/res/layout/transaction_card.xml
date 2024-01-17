@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
+<!-- res/layout/item_transaction.xml -->
 
-    <TextView
-        android:id="@+id/textViewDate"
-        android:layout_width="wrap_content"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#DF3D3D"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Date: "
         app:layout_constraintBottom_toTopOf="@+id/textViewType"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,19 +31,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+=======
+        android:background="#FFFFFF"
+        android:orientation="horizontal"> <!-- White background for the card -->
 
-    <TextView
-        android:id="@+id/textViewAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Amount: "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        <!-- Left Side (Date, Type, Note) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
 
+            <!-- Date -->
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="01/01/2024"
+                android:textColor="#2E8B57"
+                android:textSize="18sp" /> <!-- Dark Olive Green -->
+>>>>>>> cd56a22f12af6a94d48bd6de2ba8008e732a24db
+
+            <!-- Type -->
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Credit"
+                android:textColor="#4169E1"
+                android:textSize="18sp" /> <!-- Royal Blue -->
+
+<<<<<<< HEAD
     <TextView
         android:id="@+id/textViewBalance"
         android:layout_width="55dp"
@@ -64,3 +89,47 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+            <!-- Note -->
+            <TextView
+                android:id="@+id/textViewAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Sample transaction"
+                android:textColor="#2E8B57"
+                android:textSize="18sp" /> <!-- Dark Olive Green -->
+        </LinearLayout>
+
+        <!-- Right Side (Amount, Balance) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <!-- Amount -->
+            <TextView
+                android:id="@+id/textViewBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="$100.00"
+                android:textColor="#2E8B57"
+                android:textSize="18sp" /> <!-- Dark Olive Green -->
+
+            <!-- Balance -->
+            <TextView
+                android:id="@+id/textViewAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Balance: $1,000.00"
+                android:textColor="#4169E1"
+                android:textSize="18sp" /> <!-- Royal Blue -->
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+>>>>>>> cd56a22f12af6a94d48bd6de2ba8008e732a24db
