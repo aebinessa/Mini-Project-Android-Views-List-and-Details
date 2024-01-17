@@ -1,6 +1,7 @@
 package com.binjesus.androidminiproject.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -11,7 +12,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Transaction> transactions = new ArrayList<>();
 
 
 
