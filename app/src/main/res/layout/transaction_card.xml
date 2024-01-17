@@ -13,6 +13,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:text="Date: "
+        app:layout_constraintBottom_toTopOf="@+id/textViewType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+
+        android:text="Type: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+=======
         android:background="#FFFFFF"
         android:orientation="horizontal"> <!-- White background for the card -->
 
@@ -32,6 +51,7 @@
                 android:text="01/01/2024"
                 android:textColor="#2E8B57"
                 android:textSize="18sp" /> <!-- Dark Olive Green -->
+>>>>>>> cd56a22f12af6a94d48bd6de2ba8008e732a24db
 
             <!-- Type -->
             <TextView
@@ -44,6 +64,32 @@
                 android:textColor="#4169E1"
                 android:textSize="18sp" /> <!-- Royal Blue -->
 
+<<<<<<< HEAD
+    <TextView
+        android:id="@+id/textViewBalance"
+        android:layout_width="55dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="212dp"
+        android:text="Balance: "
+        app:layout_constraintBottom_toTopOf="@+id/textViewAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAmount"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:text="Account: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+=======
             <!-- Note -->
             <TextView
                 android:id="@+id/textViewAmount"
@@ -86,3 +132,4 @@
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
+>>>>>>> cd56a22f12af6a94d48bd6de2ba8008e732a24db
