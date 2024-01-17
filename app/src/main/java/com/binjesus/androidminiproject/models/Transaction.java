@@ -1,5 +1,6 @@
 package com.binjesus.androidminiproject.models;
 
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -10,6 +11,11 @@ public class Transaction {
     private double amount, balance;
 
     private TransactionType type;
+
+
+
+
+
 
     public Transaction(int id, int account, String date, double amount, double balance, TransactionType type) {
         this.id = id;

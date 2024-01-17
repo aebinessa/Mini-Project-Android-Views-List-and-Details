@@ -9,15 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.binjesus.androidminiproject.R;
+import com.binjesus.androidminiproject.TransactionItemListener;
 import com.binjesus.androidminiproject.models.Transaction;
 
 import java.util.ArrayList;
 
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder> {
 
-    private ArrayList<Transaction> transactions;
-    public TransactionAdapter(ArrayList<Transaction> transactions) {
+    // Inside the adaper class
+//    private static ArrayList<Transaction> transaction;
+//    private static TransactionItemListener transactionItemListenerItemListener;
+    private static TransactionItemListener transactionItemListener;
+    private static ArrayList<Transaction> transactions;
+    public TransactionAdapter(ArrayList<Transaction> transactions, TransactionItemListener transactionItemListener) {
         this.transactions = transactions;
+        this.transactionItemListener = transactionItemListener;
     }
 
 
@@ -44,6 +50,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         holder.textViewtype.setText(String.valueOf(transactions.get(position).getType()));
 
 
+        // Missing onclick
+
+
 
     }
 
@@ -65,6 +74,10 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             textViewAmount = itemView.findViewById(R.id.textViewAmount);
             textViewBalance = itemView.findViewById(R.id.textViewBalance);
             textViewAccount = itemView.findViewById(R.id.textViewAccount);
+            itemView.setOnClickListener(v -> {
+                transactionItemListener.onTransactionItemClicked(transactions.get(getAdapterPosition()));
+            });
+
         }
     }
     @Override
