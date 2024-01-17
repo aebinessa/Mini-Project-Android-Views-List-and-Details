@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:textSize="18sp"
-                android:text="Sample transaction"
+                android:text="Account"
                 android:textColor="#2E8B57"/> <!-- Dark Olive Green -->
         </LinearLayout>
 

@@ -12,12 +12,13 @@ public class TransactionRepo {
 }
     public ArrayList<Transaction> generateDummyTransactionList(){
         ArrayList<Transaction> transactions = new ArrayList<>();
-        transactions.add(new Transaction(333,555,"today",4444,555));
-        transactions.add(new Transaction(333,555,"today",4444,555));
-        transactions.add(new Transaction(333,555,"today",4444,555));
-        transactions.add(new Transaction(333,555,"today",4444,555));
-        transactions.add(new Transaction(333,555,"today",4444,555));
-        transactions.add(new Transaction(333,555,"today",4444,555));
+        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.WITHDRAWAL));
+        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
+        transactions.add(new Transaction(1,1,"2024",2,2,transactionType.DEPOSIT));
+//
 
 
 
