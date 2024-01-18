@@ -1,55 +1,79 @@
 
     <!-- res/layout/transaction_details.xml -->
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="150dp">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp">
 
     <TextView
         android:id="@+id/textTransactionDetails"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="💰 \Transaction Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💰 Transaction Details"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
 
     <TextView
         android:id="@+id/textTransactionID"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Transaction ID: " />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction ID: "
+        android:layout_below="@+id/textTransactionDetails"
+        android:layout_alignStart="@+id/textTransactionDetails"
+        android:layout_marginTop="8dp" />
 
     <TextView
-            android:id="@+id/textTransactionTypeDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Transaction Type: " />
+        android:id="@+id/textTransactionTypeDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction Type: "
+        android:layout_below="@+id/textTransactionID"
+        android:layout_alignStart="@+id/textTransactionID"
+        android:layout_marginTop="8dp" />
 
-        <TextView
-            android:id="@+id/textViewDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date: " />
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:layout_below="@+id/textTransactionTypeDetails"
+        android:layout_alignStart="@+id/textTransactionTypeDetails"
+        android:layout_marginTop="8dp" />
 
-        <TextView
-            android:id="@+id/textTransactionAmountDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Amount: " />
+    <TextView
+        android:id="@+id/textTransactionAmountDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount: "
+        android:layout_below="@+id/textViewDate"
+        android:layout_alignStart="@+id/textViewDate"
+        android:layout_marginTop="8dp" />
 
-        <TextView
-            android:id="@+id/textTransactionBalanceDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Current Balance: " />
+    <TextView
+        android:id="@+id/textTransactionBalanceDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Balance: "
+        android:layout_below="@+id/textTransactionAmountDetails"
+        android:layout_alignStart="@+id/textTransactionAmountDetails"
+        android:layout_marginTop="8dp" />
 
-        <TextView
-            android:id="@+id/textTransactionAccountDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Account: " />
+    <TextView
+        android:id="@+id/textTransactionAccountDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account: "
+        android:layout_below="@+id/textTransactionBalanceDetails"
+        android:layout_alignStart="@+id/textTransactionBalanceDetails"
+        android:layout_marginTop="8dp" />
 
-    </LinearLayout>
+</RelativeLayout>
