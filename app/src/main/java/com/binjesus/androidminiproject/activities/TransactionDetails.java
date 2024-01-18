@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.binjesus.androidminiproject.R;
+import com.binjesus.androidminiproject.models.Transaction;
 
 public class TransactionDetails extends AppCompatActivity {
 
@@ -26,5 +27,6 @@ public class TransactionDetails extends AppCompatActivity {
         textTransactionBalanceDetails = findViewById(R.id.textTransactionBalanceDetails);
         textTransactionAccountDetails = findViewById(R.id.textTransactionAccountDetails);
 
+        Transaction transaction = getIntent().getSerializableExtra()
     }
 }
