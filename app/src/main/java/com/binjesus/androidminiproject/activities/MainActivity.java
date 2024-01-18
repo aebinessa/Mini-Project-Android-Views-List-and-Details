@@ -16,12 +16,6 @@ import com.binjesus.androidminiproject.repositories.TransactionRepo;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements TransactionItemListener {
-    @Override
-    public void onTransactionItemClicked(Transaction transaction) {
-        Intent intent = new Intent(MainActivity.this, TransactionDetails.class);
-        startActivity(intent);
-
-    }
 
 
     RecyclerView transactionRecyclerView;
@@ -31,17 +25,19 @@ public class MainActivity extends AppCompatActivity implements TransactionItemLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ArrayList<Transaction> Transaction = TransactionRepo.getInstance().generateDummyTransactionList();
+        ArrayList<Transaction> transactionsArrayList = TransactionRepo.getInstance().generateDummyTransactionList();
         transactionRecyclerView =findViewById(R.id.transactionRecyclerView);
-        TransactionAdapter adapter = new TransactionAdapter(Transaction, this);
+        TransactionAdapter adapter = new TransactionAdapter(transactionsArrayList, this);
         transactionRecyclerView.setAdapter(adapter);
         transactionRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-       transactionRecyclerView.setOnClickListener(v ->{
-           Intent intent = new Intent(MainActivity.this, TransactionDetails.class);
-           intent.putExtra("TRANSACTION_KEY", Transaction);
-           startActivity(intent);
 
-     });
+    }
+
+    @Override
+    public void onTransactionItemClicked(Transaction transaction) {
+        Intent intent = new Intent(MainActivity.this, TransactionDetails.class);
+        intent.putExtra("TRANSACTION_KEY", transaction);
+        startActivity(intent);
 
     }
 }

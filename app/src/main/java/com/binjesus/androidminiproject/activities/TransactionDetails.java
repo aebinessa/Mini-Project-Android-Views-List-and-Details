@@ -19,7 +19,6 @@ public class TransactionDetails extends AppCompatActivity {
         setContentView(R.layout.activity_transaction_details);
 
 
-        textTransactionDetails = findViewById(R.id.textTransactionDetails);
         textTransactionID = findViewById(R.id.textTransactionID);
         textTransactionTypeDetails = findViewById(R.id.textTransactionTypeDetails);
         textViewDate = findViewById(R.id.textViewDate);
@@ -27,6 +26,14 @@ public class TransactionDetails extends AppCompatActivity {
         textTransactionBalanceDetails = findViewById(R.id.textTransactionBalanceDetails);
         textTransactionAccountDetails = findViewById(R.id.textTransactionAccountDetails);
 
-        Transaction transaction = getIntent().getSerializableExtra()
+        Transaction transaction = getIntent().getSerializableExtra("TRANSACTION_KEY", Transaction.class);
+        textTransactionID.setText("ID: "+String.valueOf(transaction.getId()));
+        textViewDate.setText("Date: "+String.valueOf(transaction.getDate()));
+        textTransactionAmountDetails.setText("Amount: "+String.valueOf(transaction.getAmount()));
+        textTransactionBalanceDetails.setText("Balance: "+String.valueOf(transaction.getBalance()));
+        textTransactionAccountDetails.setText("Account: "+String.valueOf(transaction.getAccount()));
+
+
+
     }
 }

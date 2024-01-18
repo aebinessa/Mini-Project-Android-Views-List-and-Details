@@ -1,10 +1,11 @@
 package com.binjesus.androidminiproject.models;
 
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Transaction {
+public class Transaction implements Serializable {
 
     private int id, account;
     private String date;

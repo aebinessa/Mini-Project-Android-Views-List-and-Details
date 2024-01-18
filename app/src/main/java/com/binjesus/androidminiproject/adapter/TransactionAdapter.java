@@ -43,9 +43,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
     public void onBindViewHolder(@NonNull TransactionViewHolder holder, int position) {
         holder.textViewDate.setText(transactions.get(position).getDate());
 
-        holder.textViewAmount.setText(String.valueOf(transactions.get(position).getAmount()));
-        holder.textViewBalance.setText(String.valueOf(transactions.get(position).getBalance()));
-        holder.textViewAmount.setText(String.valueOf(transactions.get(position).getAccount()));
+        holder.textViewAmount.setText("Amount "+"$"+String.valueOf(transactions.get(position).getAmount()));
+        holder.textViewBalance.setText("Balance "+"$"+ String.valueOf(transactions.get(position).getBalance()));
+        holder.textViewAccount.setText(String.valueOf(transactions.get(position).getAccount()));
 
         holder.textViewtype.setText(String.valueOf(transactions.get(position).getType()));
 
