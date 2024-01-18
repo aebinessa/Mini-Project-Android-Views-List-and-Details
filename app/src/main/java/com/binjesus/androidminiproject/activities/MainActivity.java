@@ -36,10 +36,11 @@ public class MainActivity extends AppCompatActivity implements TransactionItemLi
         TransactionAdapter adapter = new TransactionAdapter(Transaction, this);
         transactionRecyclerView.setAdapter(adapter);
         transactionRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//       transactionRecyclerView.setOnClickListener(v ->{
-//           Intent intent = new Intent(MainActivity.this, TransactionDetails.class);
-//           startActivity(intent);
-//       });
+       transactionRecyclerView.setOnClickListener(v ->{
+           Intent intent = new Intent(MainActivity.this, TransactionDetails.class);
+           startActivity(intent);
+
+     });
 
     }
 }
