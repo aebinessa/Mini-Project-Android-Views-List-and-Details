@@ -74,6 +74,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             textViewAmount = itemView.findViewById(R.id.textViewAmount);
             textViewBalance = itemView.findViewById(R.id.textViewBalance);
             textViewAccount = itemView.findViewById(R.id.textViewAccount);
+
             itemView.setOnClickListener(v -> {
                 transactionItemListener.onTransactionItemClicked(transactions.get(getAdapterPosition()));
             });
