@@ -16,9 +16,6 @@ import java.util.ArrayList;
 
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder> {
 
-    // Inside the adaper class
-//    private static ArrayList<Transaction> transaction;
-//    private static TransactionItemListener transactionItemListenerItemListener;
     private static TransactionItemListener transactionItemListener;
     private static ArrayList<Transaction> transactions;
     public TransactionAdapter(ArrayList<Transaction> transactions, TransactionItemListener transactionItemListener) {
@@ -50,7 +47,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         holder.textViewtype.setText(String.valueOf(transactions.get(position).getType()));
 
 
-        // Missing onclick
+
 
 
 
